@@ -28,5 +28,19 @@ public class EmployeeTest {
 		employee.setSocialSecurityNumber("123-45-6710");
 		assertEquals(employee.getSocialSecurityNumber(),"123-45-6710");
 	}
+	
+	@Test
+	public void fix0001_SocialSecurityMustBeACertainFormat() {
+		String badSSN ="Ramlikesxxxx";
+		Employee employee = new Employee();
+		
+		try {
+			employee.setSocialSecurityNumber(badSSN);
+			fail("This line should not be reached");
+		} catch (IllegalArgumentException iae) {
+			assertEquals(iae.getMessage(), "xxxxxxx is not a valid SSN");
+		}
+		
+	}
 
 }
