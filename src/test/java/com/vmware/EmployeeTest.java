@@ -15,5 +15,18 @@ public class EmployeeTest {
 			
 		
 	}
+	
+	@Test
+	public void addASocialSecurityNumber1() {
+		Employee employee = new Employee();
+		employee.setSocialSecurityNumber("123-45-6789");
+		assertEquals(employee.getSocialSecurityNumber(),"123-45-6789");
+	}
+	@Test
+	public void addASocialSecurityNumber() {
+		Employee employee = new Employee();
+		employee.setSocialSecurityNumber("123-45-6710");
+		assertEquals(employee.getSocialSecurityNumber(),"123-45-6710");
+	}
 
 }
