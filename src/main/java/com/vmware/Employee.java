@@ -2,7 +2,7 @@ package com.vmware;
 
 import java.util.regex.Pattern;
 
-import org.hamcrest.Matcher;
+
 
 public class Employee {
 	private String name;
