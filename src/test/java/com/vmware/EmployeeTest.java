@@ -38,7 +38,7 @@ public class EmployeeTest {
 			employee.setSocialSecurityNumber(badSSN);
 			fail("This line should not be reached");
 		} catch (IllegalArgumentException iae) {
-			assertEquals(iae.getMessage(), "xxxxxxx is not a valid SSN");
+			assertEquals(iae.getMessage(), "Ramlikesxxxx is not a valid SSN");
 		}
 		
 	}

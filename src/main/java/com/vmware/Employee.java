@@ -2,6 +2,8 @@ package com.vmware;
 
 import java.util.regex.Pattern;
 
+import org.hamcrest.Matcher;
+
 public class Employee {
 	private String name;
 	private String ssn;
@@ -16,7 +18,11 @@ public class Employee {
 
 	public void setSocialSecurityNumber(String ssn) {
 		// TODO Auto-generated method stub
-		this.ssn =ssn;
+		Pattern pattern =Pattern.compile("\\d{3}-\\d{2}-\\d{4}");
+		java.util.regex.Matcher matcher = pattern.matcher(ssn);
+		if(!(matcher.matches()))
+		 throw new IllegalArgumentException(ssn + " is not a valid SSN");
+		 this.ssn = ssn;
 		
 	}
 
